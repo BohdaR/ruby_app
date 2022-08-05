@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
-  def index
-  end
+  def index; end
 
   def result
     github_login = params['github_login']
@@ -18,8 +17,6 @@ class HomeController < ApplicationController
     variables = { 'gitLogin' => github_login }
     result_hash = Schema.execute(query_string, variables: variables)
 
-    unless result_hash['data'].nil?
-      @result_hash = result_hash['data']['githubUser']
-    end
+    @result_hash = result_hash['data']['githubUser'] unless result_hash['data'].nil?
   end
 end

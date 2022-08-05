@@ -20,5 +20,5 @@ RSpec.describe Types::QueryType do
 
   it describe '404 or 403' do
     assert_nil @result
-    end
+  end
 end

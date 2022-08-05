@@ -1,14 +1,14 @@
 <div class="container">
   <% if @result_hash %>
-    <% if @result_hash["name"] %>
-      <h2><%= @result_hash["name"] %></h2>
+    <% if @result_hash['name'] %>
+      <h2><%= @result_hash['name'] %></h2>
     <% else %>
       <h2>unknown name</h2>
     <% end %>
 
-    <% @result_hash["repos"].each do |repos|  %>
+    <% @result_hash['repos'].each do |repos|  %>
       <ul>
-        <li><%= repos["name"] %></li>
+        <li><%= repos['name'] %></li>
       </ul>
     <% end %>
 

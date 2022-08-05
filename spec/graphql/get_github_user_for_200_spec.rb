@@ -20,16 +20,16 @@ RSpec.describe Types::QueryType do
     @res_by_user_repos = Net::HTTP.get_response(URI("https://api.github.com/users/#{@name}/repos"))
   end
 
-  it describe "loads information about GitHub user" do
+  it describe 'loads information about GitHub user' do
     assert_equal JSON.parse(@res_by_user_info.body)['name'], @result['name']
   end
 
-  it describe "check github repos length" do
+  it describe 'check github repos length' do
     assert_equal JSON.parse(@res_by_user_repos.body).length, @result['repos'].length
   end
 
-  it describe "check github repos names" do
-    for i in 0..@result['repos'].length - 1 do
+  it describe 'check github repos names' do
+    (0..@result['repos'].length - 1).each do |i|
       assert_equal JSON.parse(@res_by_user_repos.body)[i]['name'], @result['repos'][i]['name']
     end
   end
