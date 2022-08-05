@@ -1,0 +1,19 @@
+<div class="container">
+  <% if @result_hash %>
+    <% if @result_hash["name"] %>
+      <h2><%= @result_hash["name"] %></h2>
+    <% else %>
+      <h2>unknown name</h2>
+    <% end %>
+
+    <% @result_hash["repos"].each do |repos|  %>
+      <ul>
+        <li><%= repos["name"] %></li>
+      </ul>
+    <% end %>
+
+  <% else %>
+    <h1>Невдалось отримати дані</h1>
+  <% end %>
+  <a href="<%= url_for home_url %>">Повернутись в головне меню</a>
+</div>

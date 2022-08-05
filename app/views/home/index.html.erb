@@ -1,0 +1,6 @@
+<h1>GitHub repos finder</h1>
+
+<%= form_with url: "/result", method: :get, class: 'search-form' do |form| %>
+  <%= form.text_field :github_login, placeholder: 'Enter GitHub login', class: 'text-input'%>
+  <%= form.submit "Search", name: nil, class: 'submit-button'%>
+<% end %>
