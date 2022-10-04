@@ -13,7 +13,7 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
   schedule:
-    - cron: '37 11 * * 5'
+    - cron: '16 17 * * 6'
 
 jobs:
   rubocop:
@@ -31,10 +31,7 @@ jobs:
       uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
       with:
         ruby-version: 2.6
-
-    # This step is not necessary if you add the gem to your Gemfile
-    - name: Install Code Scanning integration
-
+        
     - name: Install dependencies
       run: bundle install
 
