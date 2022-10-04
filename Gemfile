@@ -86,6 +86,7 @@ gem "graphiql-rails"
 gem "graphql"
 
 group :rubocop do
+  gem "code-scanning-rubocop"
   gem "rubocop", ">= 1.25.1", require: false
   gem "rubocop-minitest", require: false
   gem "rubocop-packaging", require: false
