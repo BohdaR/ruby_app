@@ -30,8 +30,6 @@ rubocop_config_path: ".rubocop.yml"
 # Valid options: list of valid cop(s) and/or departments.
 # Default: nil
 # Resource: https://rubocop.readthedocs.io/en/stable/cops/
-rubocop_excluded_cops:
-  - "Style/FrozenStringLiteralComment"
 
 # Minimum severity for exit with error code
 # Valid options: 'refactor', 'convention', 'warning', 'error', or 'fatal'.
