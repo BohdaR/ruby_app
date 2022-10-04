@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -70,10 +72,10 @@ end
 
 group :test, :development do
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.4'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'rubocop', require: false
+  gem 'sqlite3', '~> 1.4'
   gem 'vcr'
 end
 
