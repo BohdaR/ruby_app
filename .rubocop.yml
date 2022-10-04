@@ -11,7 +11,3 @@ AllCops:
     - 'actionmailbox/test/dummy/**/*'
     - 'actiontext/test/dummy/**/*'
     - '**/node_modules/**/*'
-  SuggestExtensions: false
-
-Documentation:
-  Enabled: false
