@@ -1,5 +1,7 @@
-require 'rails_helper'
-require 'net/http'
+# frozen_string_literal: true
+
+require "rails_helper"
+require "net/http"
 
 RSpec.describe Types::QueryType do
   before(:each) do
@@ -14,11 +16,11 @@ RSpec.describe Types::QueryType do
           }
     GRAPHQL
 
-    @name = 'some_incorrect_name'
-    @result = Schema.execute(query_string, variables: { 'gitLogin' => @name })['data']['githubUser']
+    @name = "some_incorrect_name"
+    @result = Schema.execute(query_string, variables: { "gitLogin" => @name })["data"]["githubUser"]
   end
 
-  it describe '404 or 403' do
+  it describe "404 or 403" do
     assert_nil @result
   end
 end

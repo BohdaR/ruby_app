@@ -213,6 +213,17 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.19.1)
       parser (>= 3.1.1.0)
+    rubocop-minitest (0.22.2)
+      rubocop (>= 0.90, < 2.0)
+    rubocop-packaging (0.5.2)
+      rubocop (>= 1.33, < 2.0)
+    rubocop-performance (1.15.0)
+      rubocop (>= 1.7.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
+    rubocop-rails (2.16.1)
+      activesupport (>= 4.2.0)
+      rack (>= 1.1)
+      rubocop (>= 1.33.0, < 2.0)
     ruby-progressbar (1.11.0)
     rubyzip (2.3.2)
     selenium-webdriver (4.3.0)
@@ -274,7 +285,11 @@ DEPENDENCIES
   rails (~> 7.0.3, >= 7.0.3.1)
   rails-controller-testing
   rspec-rails
-  rubocop
+  rubocop (>= 1.25.1)
+  rubocop-minitest
+  rubocop-packaging
+  rubocop-performance
+  rubocop-rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
@@ -289,4 +304,4 @@ RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.2.3
+   2.3.21
