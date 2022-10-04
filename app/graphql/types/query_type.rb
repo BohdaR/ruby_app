@@ -15,13 +15,12 @@ module Types
       res_by_user_info = Net::HTTP.get_response(URI("https://api.github.com/users/#{name}"))
       res_by_user_repos = Net::HTTP.get_response(URI("https://api.github.com/users/#{name}/repos"))
 
-      if (res_by_user_info.code == '200') && (res_by_user_repos.code == '200')
+      return unless (res_by_user_info.code == '200') && (res_by_user_repos.code == '200')
 
-        result = JSON.parse(res_by_user_info.body)
-        result['repos'] = JSON.parse(res_by_user_repos.body)
+      result = JSON.parse(res_by_user_info.body)
+      result['repos'] = JSON.parse(res_by_user_repos.body)
 
-        result
-      end
+      result
     end
   end
 end
